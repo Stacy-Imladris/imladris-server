@@ -44,14 +44,14 @@ const users = require('./users-router')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
-const mongoose = require('mongoose')
+   //const mongoose = require('mongoose')
 
 //mongoose.connect('mongodb://localhost/users', {useNewUrlParser: true})
-main().catch(err => console.log(err));
+   //main().catch(err => console.log(err));
 
-async function main() {
-  await mongoose.connect('mongodb://localhost:27017/mydb');
-}
+   //async function main() {
+     //await mongoose.connect('mongodb://localhost:27017/mydb');
+   //}
 
 // let db = mongoose.connection
 // db.on('error', console.error.bind(console, 'connection error:'))
@@ -64,7 +64,7 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-app.use('/users', users)
+   //app.use('/users', users)
 
 app.get('/tasks', async (req, res) => {
   res.send('Tasks')
