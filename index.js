@@ -74,6 +74,6 @@ app.use((req, res) => {
   res.send(404)
 });
 
-app.listen(7542, () => {
+app.listen(process.env.PORT, () => {
   console.log('Example app listening on port 7542')
 })
